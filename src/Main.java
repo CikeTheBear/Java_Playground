@@ -3,26 +3,11 @@
 public class Main {
     public static void main(String[] args) {
         
-        Car colorado = new Car();
-        colorado.make = "Chevrolet";
-        colorado.model = "Colorado";
-        colorado.color = "Red";
 
-        colorado.accelerate();
+    SportsCar ferrari = new SportsCar("Ferrari", "F8 Tributo", "Red");
 
-        
-        Car mustang = new Car("Ford", "Mustang", "Red");
+    ferrari.activateTurboBoost();
 
-
-        mustang.turn();
-
-        
-        
-        System.out.println(colorado);
-        System.out.println(mustang);
-
-
-
-
+    System.out.println(ferrari.model + " is running at " + ferrari.getSpeed() + " mph");
     }
 }

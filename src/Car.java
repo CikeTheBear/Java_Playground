@@ -1,44 +1,31 @@
+public class Car extends Vehicle {
 
-public class Car {
-    String make;
-    String model;
-    String color;
+    int seatPosition = 0;
+    
+    public Car(String make, String model, String color) {
+        super(make, model, color);
+        System.out.println("Car created!");
 
 
-    // No-argument constructor (no parameters)
-    public Car(){
-        this.make = "Uknown";
-        this.model = "Uknown";
-        this.color = "Uknown";
     }
 
-    // Constructor with parameters
-    public Car(String make, String model, String color){
-        this.make = make;
-        this.model = model;
-        this.color = color;
+    public void adjustSeat(int adjustment) {
+        this.seatPosition += adjustment;
+
+        if(adjustment > 0) {
+            System.out.println("Moving seat forward");
+        }
+        else if(adjustment < 0) {
+            System.out.println("Moving seat backward");
+        }
+        else {
+            System.out.println("Seat position not changed.");
+        }
+
     }
+    
 
 
-
-
-
-    public void accelerate(){
-        System.out.println("The car is accelerating!");
-    }
-
-
-    public void turn(){
-        System.out.println("The car is turning!");
-
-        
-    }
-
-
-    @Override
-    public String toString() {
-        return "Car [make=" + make + ", model=" + model + ", color=" + color + "]";
-    }
 }
 
 
